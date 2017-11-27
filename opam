@@ -1,0 +1,15 @@
+opam-version: "1.2"
+name: "cervoise"
+version: "0.1"
+license: "MIT"
+maintainer: "Jacques-Pascal Deplaix <jp.deplaix@gmail.com>"
+authors: "Jacques-Pascal Deplaix <jp.deplaix@gmail.com>"
+homepage: "https://github.com/jpdeplaix/opam-ci-scripts"
+dev-repo: "https://github.com/jpdeplaix/opam-ci-scripts.git"
+bug-reports: "https://github.com/jpdeplaix/opam-ci-scripts/issues"
+tags: [
+  "CI"
+  "Continuous Integration"
+  "script"
+  "bash"
+]
