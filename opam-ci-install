@@ -18,9 +18,8 @@ if [ $version -eq 1 ]; then
 elif [ $version -eq 2 ]; then
     cmd opam remote
     cmd opam list
-    cmd opam depext -u $1 || exit 1
     export OPAMERRLOGLEN=0
-    cmd opam install -yj2 $1
+    cmd opam depext -uivyj 2 $1
     exitcode=$?
     if [ $exitcode -ne 0 ] && [ $exitcode -ne 20 ]; then
         exit $exitcode
