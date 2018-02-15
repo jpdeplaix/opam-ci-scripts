@@ -8,6 +8,7 @@ cmd() {
 version=`opam --version | cut -b 1`
 
 if [ $version -eq 1 ]; then
+    cmd opam depext -uvy $1
     if ! opam install $1 --dry-run; then
         echo Package unavailable, skipping.
         exit 0
