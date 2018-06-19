@@ -7,6 +7,10 @@ cmd() {
 
 version=`opam --version | cut -b 1`
 
+# Avoids network failures when too much jobs are requesting the same archive
+# e.g. github spam detection
+export OPAMDOWNLOADJOBS=1
+
 if [ $version -eq 1 ]; then
     cmd opam depext -uvy $1
     if ! opam install $1 --dry-run; then
