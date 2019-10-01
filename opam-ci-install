@@ -24,6 +24,7 @@ elif [ $version -eq 2 ]; then
     cmd opam remote
     cmd opam list
     export OPAMERRLOGLEN=0
+    export OPAMPRECISETRACKING=1
     cmd opam remove -y $1
     cmd opam depext -uivyj 2 $1
     exitcode=$?
