@@ -19,14 +19,14 @@ if [ $version -eq 1 ]; then
     fi
     cmd opam remote
     cmd opam list
-    cmd exec opam depext -uivyj 2 $1
+    cmd exec opam depext -uivyj 24 $1
 elif [ $version -eq 2 ]; then
     cmd opam remote
     cmd opam list
     export OPAMERRLOGLEN=0
     export OPAMPRECISETRACKING=1
     cmd opam remove -y $1
-    cmd opam depext -uivyj 2 $1
+    cmd opam depext -uivyj 24 $1
     exitcode=$?
     if [ $exitcode -ne 0 ] && [ $exitcode -ne 20 ]; then
         exit $exitcode
